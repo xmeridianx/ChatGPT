@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    tools:context=".view.ChatGPTActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:hint="Введите запрос"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/voiceInputButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Голосовой ввод"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voiceInputButton"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:layout_marginBottom="300dp"
+            android:padding="16dp"
+            android:textSize="22sp" />
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/submitButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/editText"
+        android:src="@drawable/baseline_arrow_forward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@id/editText"
+         />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
