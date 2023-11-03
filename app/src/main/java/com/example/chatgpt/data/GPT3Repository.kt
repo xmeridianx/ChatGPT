@@ -11,7 +11,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 class GPT3Repository(val client: OkHttpClient) {
-    val apiKey = "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"
+    val apiKey = "notforyoubro"
     val url = "https://api.openai.com/v1/engines/text-davinci-003/completions"
 
     suspend fun sendMessage(text: String): Result<String>{
